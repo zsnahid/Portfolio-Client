@@ -1,70 +1,204 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@import "tw-animate-css";
 
+@custom-variant dark (&:is(.dark *));
+
+/* Space-themed Color Palette */
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+  /* Primary Colors - Deep Space Blues */
+  --color-cosmic-void: #0B0E1A;        /* Deep space background */
+  --color-nebula-dark: #1A1F3A;        /* Dark nebula */
+  --color-stellar-blue: #2D4A7A;       /* Stellar blue */
+  --color-cosmic-blue: #4A7BA7;        /* Cosmic blue */
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* Accent Colors - Celestial Highlights */
+  --color-stardust: #E8F4FD;           /* Bright stardust white */
+  --color-moonbeam: #B8D4F0;           /* Soft moonbeam */
+  --color-aurora: #7DD3FC;             /* Aurora cyan */
+  --color-plasma: #A78BFA;             /* Plasma purple */
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Neutral Colors - Space Grays */
+  --color-asteroid: #374151;           /* Dark asteroid gray */
+  --color-meteor: #6B7280;             /* Medium meteor gray */
+  --color-satellite: #9CA3AF;          /* Light satellite gray */
+  --color-cosmic-dust: #D1D5DB;        /* Cosmic dust light gray */
+
+  /* Functional Colors */
+  --color-success: #10B981;            /* Success green (earth-like) */
+  --color-warning: #F59E0B;            /* Warning amber (solar) */
+  --color-error: #EF4444;              /* Error red (mars-like) */
+
+  /* Gradients */
+  --gradient-cosmic: linear-gradient(135deg, var(--color-cosmic-void) 0%, var(--color-nebula-dark) 50%, var(--color-stellar-blue) 100%);
+  --gradient-aurora: linear-gradient(135deg, var(--color-aurora) 0%, var(--color-plasma) 100%);
+  --gradient-stardust: linear-gradient(135deg, var(--color-stardust) 0%, var(--color-moonbeam) 100%);
+  --radius: 0.625rem;
+  
+  /* Shadcn UI colors adapted for space theme */
+  --background: var(--color-cosmic-void);
+  --foreground: var(--color-stardust);
+  --card: var(--color-nebula-dark);
+  --card-foreground: var(--color-stardust);
+  --popover: var(--color-nebula-dark);
+  --popover-foreground: var(--color-stardust);
+  --primary: var(--color-aurora);
+  --primary-foreground: var(--color-cosmic-void);
+  --secondary: var(--color-stellar-blue);
+  --secondary-foreground: var(--color-stardust);
+  --muted: var(--color-asteroid);
+  --muted-foreground: var(--color-moonbeam);
+  --accent: var(--color-plasma);
+  --accent-foreground: var(--color-cosmic-void);
+  --destructive: var(--color-error);
+  --border: var(--color-stellar-blue);
+  --input: var(--color-stellar-blue);
+  --ring: var(--color-aurora);
+  --chart-1: var(--color-aurora);
+  --chart-2: var(--color-plasma);
+  --chart-3: var(--color-stellar-blue);
+  --chart-4: var(--color-cosmic-blue);
+  --chart-5: var(--color-moonbeam);
+  --sidebar: var(--color-nebula-dark);
+  --sidebar-foreground: var(--color-stardust);
+  --sidebar-primary: var(--color-aurora);
+  --sidebar-primary-foreground: var(--color-cosmic-void);
+  --sidebar-accent: var(--color-stellar-blue);
+  --sidebar-accent-foreground: var(--color-stardust);
+  --sidebar-border: var(--color-stellar-blue);
+  --sidebar-ring: var(--color-aurora);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--color-cosmic-void);
+  color: var(--color-stardust);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+::-webkit-scrollbar-track {
+  background: var(--color-cosmic-void);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+::-webkit-scrollbar-thumb {
+  background: var(--color-stellar-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cosmic-blue);
+}
+
+/* Selection styling */
+::selection {
+  background-color: var(--color-aurora);
+  color: var(--color-cosmic-void);
+}
+
+/* Utility classes for the color palette */
+.bg-cosmic-void { background-color: var(--color-cosmic-void); }
+.bg-nebula-dark { background-color: var(--color-nebula-dark); }
+.bg-stellar-blue { background-color: var(--color-stellar-blue); }
+.bg-cosmic-blue { background-color: var(--color-cosmic-blue); }
+
+.text-stardust { color: var(--color-stardust); }
+.text-moonbeam { color: var(--color-moonbeam); }
+.text-aurora { color: var(--color-aurora); }
+.text-plasma { color: var(--color-plasma); }
+
+.border-stellar { border-color: var(--color-stellar-blue); }
+.border-aurora { border-color: var(--color-aurora); }
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+.dark {
+  /* Dark theme uses the same space colors but with slightly different contrast */
+  --background: var(--color-cosmic-void);
+  --foreground: var(--color-stardust);
+  --card: var(--color-stellar-blue);
+  --card-foreground: var(--color-stardust);
+  --popover: var(--color-stellar-blue);
+  --popover-foreground: var(--color-stardust);
+  --primary: var(--color-aurora);
+  --primary-foreground: var(--color-cosmic-void);
+  --secondary: var(--color-asteroid);
+  --secondary-foreground: var(--color-stardust);
+  --muted: var(--color-asteroid);
+  --muted-foreground: var(--color-moonbeam);
+  --accent: var(--color-plasma);
+  --accent-foreground: var(--color-cosmic-void);
+  --destructive: var(--color-error);
+  --border: var(--color-stellar-blue);
+  --input: var(--color-stellar-blue);
+  --ring: var(--color-aurora);
+  --chart-1: var(--color-aurora);
+  --chart-2: var(--color-plasma);
+  --chart-3: var(--color-stellar-blue);
+  --chart-4: var(--color-cosmic-blue);
+  --chart-5: var(--color-moonbeam);
+  --sidebar: var(--color-stellar-blue);
+  --sidebar-foreground: var(--color-stardust);
+  --sidebar-primary: var(--color-aurora);
+  --sidebar-primary-foreground: var(--color-cosmic-void);
+  --sidebar-accent: var(--color-asteroid);
+  --sidebar-accent-foreground: var(--color-stardust);
+  --sidebar-border: var(--color-stellar-blue);
+  --sidebar-ring: var(--color-aurora);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  body {
+    @apply bg-background text-foreground;
   }
 }
