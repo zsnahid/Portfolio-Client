@@ -1,79 +1,79 @@
-# Space-Themed Color Palette Documentation
+# Everforest-Inspired Color Palette Documentation
 
 ## Overview
 
-This minimalist space-themed color palette is designed for a modern, elegant portfolio website. The colors evoke the vastness and beauty of space while maintaining excellent readability and accessibility.
+This warm, nature-inspired color palette draws from the Everforest theme, creating a modern, elegant portfolio website. The colors evoke the tranquility and vitality of a lush forest while maintaining excellent readability and accessibility.
 
 ## Color Categories
 
-### Primary Colors - Deep Space Foundation
+### Primary Colors - Forest Foundation
 
-These colors form the base of your design, representing the depth of space:
+These colors form the base of your design, representing the depth and richness of a forest:
 
-- **Cosmic Void** (`#0B0E1A`) - The deepest space background
-- **Nebula Dark** (`#1A1F3A`) - Secondary dark backgrounds
-- **Stellar Blue** (`#2D4A7A`) - Medium tone for cards and sections
-- **Cosmic Blue** (`#4A7BA7`) - Lighter accent for interactive elements
+- **Forest Deep** (`#232A2E`) - The deepest forest background
+- **Pine Dark** (`#2D353B`) - Secondary dark backgrounds
+- **Forest Mid** (`#343F44`) - Medium tone for cards and sections
+- **Sage** (`#3D484D`) - Lighter neutral for interactive elements
 
-### Accent Colors - Celestial Highlights
+### Accent Colors - Nature Highlights
 
-Bright, ethereal colors that add life and personality:
+Vibrant, natural colors that add life and personality:
 
-- **Stardust** (`#E8F4FD`) - Primary text color, bright white with blue tint
-- **Moonbeam** (`#B8D4F0`) - Secondary text, soft and readable
-- **Aurora** (`#7DD3FC`) - Cyan accent for links and highlights
-- **Plasma** (`#A78BFA`) - Purple accent for special elements
+- **Snow** (`#D3C6AA`) - Primary text color, warm cream
+- **Mist** (`#A7C080`) - Secondary text, soft sage green
+- **Spring** (`#83C092`) - Green accent for links and highlights
+- **Bloom** (`#E67E80`) - Coral accent for special elements
 
-### Neutral Colors - Space Grays
+### Neutral Colors - Natural Grays
 
-Functional grays for UI elements:
+Functional grays with warm undertones:
 
-- **Asteroid** (`#374151`) - Dark gray for borders and dividers
-- **Meteor** (`#6B7280`) - Medium gray for secondary text
-- **Satellite** (`#9CA3AF`) - Light gray for subtle text
-- **Cosmic Dust** (`#D1D5DB`) - Very light gray for backgrounds
+- **Stone** (`#4F585E`) - Dark gray for borders and dividers
+- **Bark** (`#859289`) - Medium gray for secondary text
+- **Moss** (`#9DA9A0`) - Light gray for subtle text
+- **Fog** (`#C5CDD0`) - Very light gray for backgrounds
 
 ### Functional Colors
 
-Status and feedback colors with space theming:
+Status and feedback colors with nature theming:
 
-- **Success** (`#10B981`) - Earth-like green for success states
-- **Warning** (`#F59E0B`) - Solar amber for warnings
-- **Error** (`#EF4444`) - Mars-like red for errors
+- **Success** (`#A7C080`) - Forest green for success states
+- **Warning** (`#DBBC7F`) - Golden amber for warnings
+- **Error** (`#E67E80`) - Coral red for errors
 
 ## Gradients
 
 ### Primary Gradients
 
-- **Cosmic Gradient**: `linear-gradient(135deg, #0B0E1A 0%, #1A1F3A 50%, #2D4A7A 100%)`
-- **Aurora Gradient**: `linear-gradient(135deg, #7DD3FC 0%, #A78BFA 100%)`
-- **Stardust Gradient**: `linear-gradient(135deg, #E8F4FD 0%, #B8D4F0 100%)`
+- **Forest Gradient**: `linear-gradient(135deg, #232A2E 0%, #2D353B 50%, #343F44 100%)`
+- **Spring Gradient**: `linear-gradient(135deg, #83C092 0%, #A7C080 100%)`
+- **Mist Gradient**: `linear-gradient(135deg, #D3C6AA 0%, #A7C080 100%)`
 
 ## Usage Guidelines
 
 ### Typography
 
-- **Headers**: Use `text-aurora` or `text-stardust` for maximum impact
-- **Body Text**: Use `text-stardust` for primary content, `text-moonbeam` for secondary
-- **Captions**: Use `text-satellite` or `text-cosmic-dust`
+- **Headers**: Use `text-spring` or `text-snow` for maximum impact
+- **Body Text**: Use `text-snow` for primary content, `text-mist` for secondary
+- **Captions**: Use `text-moss` or `text-fog`
 
 ### Backgrounds
 
-- **Page Background**: `bg-cosmic-void`
-- **Card Backgrounds**: `bg-nebula-dark` or `bg-stellar-blue`
-- **Interactive Elements**: `bg-cosmic-blue` with hover states
+- **Page Background**: `bg-forest-deep`
+- **Card Backgrounds**: `bg-pine-dark` or `bg-forest-mid`
+- **Interactive Elements**: `bg-sage` with hover states
 
 ### Interactive Elements
 
-- **Primary Buttons**: `bg-stellar-blue` with `hover:bg-cosmic-blue`
-- **Secondary Buttons**: `border-aurora text-aurora` with `hover:bg-aurora hover:text-cosmic-void`
-- **Links**: `text-aurora` with `hover:text-plasma`
+- **Primary Buttons**: `bg-forest-mid` with `hover:bg-sage`
+- **Secondary Buttons**: `border-spring text-spring` with `hover:bg-spring hover:text-forest-deep`
+- **Links**: `text-spring` with `hover:text-bloom`
 
 ### Borders and Dividers
 
-- **Subtle Borders**: `border-stellar-blue/30`
-- **Emphasis Borders**: `border-aurora`
-- **Dividers**: `border-asteroid`
+- **Subtle Borders**: `border-forest-mid/30`
+- **Emphasis Borders**: `border-spring`
+- **Dividers**: `border-stone`
 
 ## Accessibility
 
@@ -89,8 +89,8 @@ All colors are available as CSS custom properties in `src/index.css`:
 
 ```css
 :root {
-  --color-cosmic-void: #0b0e1a;
-  --color-stardust: #e8f4fd;
+  --color-forest-deep: #232a2e;
+  --color-snow: #d3c6aa;
   /* ... etc */
 }
 ```
@@ -100,8 +100,8 @@ All colors are available as CSS custom properties in `src/index.css`:
 Extended Tailwind configuration in `tailwind.config.js` provides utility classes:
 
 ```html
-<div class="bg-cosmic-void text-stardust">
-  <h1 class="text-aurora">Space Portfolio</h1>
+<div class="bg-forest-deep text-snow">
+  <h1 class="text-spring">Everforest Portfolio</h1>
 </div>
 ```
 
@@ -110,12 +110,12 @@ Extended Tailwind configuration in `tailwind.config.js` provides utility classes
 1. **Hierarchy**: Use darker colors for backgrounds, lighter for foregrounds
 2. **Contrast**: Always test text readability against backgrounds
 3. **Consistency**: Stick to the defined palette for cohesive design
-4. **Accents**: Use aurora and plasma sparingly for maximum impact
+4. **Accents**: Use spring and bloom sparingly for maximum impact
 5. **Gradients**: Apply gradients to create depth and visual interest
 
 ## Animation Considerations
 
-- Use subtle glow effects with aurora/plasma colors
-- Implement floating animations for space-like movement
-- Add twinkling effects for star-like elements
-- Consider parallax scrolling for depth
+- Use subtle glow effects with spring/bloom colors
+- Implement gentle sway animations for natural movement
+- Add breathing effects for organic elements
+- Consider smooth transitions for forest-like serenity

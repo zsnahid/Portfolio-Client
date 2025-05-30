@@ -3,69 +3,69 @@
 
 @custom-variant dark (&:is(.dark *));
 
-/* Space-themed Color Palette */
+/* Everforest-inspired Color Palette */
 :root {
-  /* Primary Colors - Deep Space Blues */
-  --color-cosmic-void: #0B0E1A;        /* Deep space background */
-  --color-nebula-dark: #1A1F3A;        /* Dark nebula */
-  --color-stellar-blue: #2D4A7A;       /* Stellar blue */
-  --color-cosmic-blue: #4A7BA7;        /* Cosmic blue */
+  /* Primary Colors - Forest Foundation */
+  --color-forest-deep: #232A2E;        /* Deep forest background */
+  --color-pine-dark: #2D353B;          /* Dark pine */
+  --color-forest-mid: #343F44;         /* Forest mid-tone */
+  --color-sage: #3D484D;               /* Sage gray-green */
 
-  /* Accent Colors - Celestial Highlights */
-  --color-stardust: #E8F4FD;           /* Bright stardust white */
-  --color-moonbeam: #B8D4F0;           /* Soft moonbeam */
-  --color-aurora: #7DD3FC;             /* Aurora cyan */
-  --color-plasma: #A78BFA;             /* Plasma purple */
+  /* Accent Colors - Nature Highlights */
+  --color-snow: #D3C6AA;               /* Warm cream text */
+  --color-mist: #A7C080;               /* Soft sage green */
+  --color-spring: #83C092;             /* Spring green accent */
+  --color-bloom: #E67E80;              /* Coral bloom accent */
 
-  /* Neutral Colors - Space Grays */
-  --color-asteroid: #374151;           /* Dark asteroid gray */
-  --color-meteor: #6B7280;             /* Medium meteor gray */
-  --color-satellite: #9CA3AF;          /* Light satellite gray */
-  --color-cosmic-dust: #D1D5DB;        /* Cosmic dust light gray */
+  /* Neutral Colors - Natural Grays */
+  --color-stone: #4F585E;              /* Dark stone gray */
+  --color-bark: #859289;               /* Medium bark gray */
+  --color-moss: #9DA9A0;               /* Light moss gray */
+  --color-fog: #C5CDD0;                /* Fog light gray */
 
   /* Functional Colors */
-  --color-success: #10B981;            /* Success green (earth-like) */
-  --color-warning: #F59E0B;            /* Warning amber (solar) */
-  --color-error: #EF4444;              /* Error red (mars-like) */
+  --color-success: #A7C080;            /* Success sage green */
+  --color-warning: #DBBC7F;            /* Warning golden amber */
+  --color-error: #E67E80;              /* Error coral red */
 
   /* Gradients */
-  --gradient-cosmic: linear-gradient(135deg, var(--color-cosmic-void) 0%, var(--color-nebula-dark) 50%, var(--color-stellar-blue) 100%);
-  --gradient-aurora: linear-gradient(135deg, var(--color-aurora) 0%, var(--color-plasma) 100%);
-  --gradient-stardust: linear-gradient(135deg, var(--color-stardust) 0%, var(--color-moonbeam) 100%);
+  --gradient-forest: linear-gradient(135deg, var(--color-forest-deep) 0%, var(--color-pine-dark) 50%, var(--color-forest-mid) 100%);
+  --gradient-spring: linear-gradient(135deg, var(--color-spring) 0%, var(--color-mist) 100%);
+  --gradient-mist: linear-gradient(135deg, var(--color-snow) 0%, var(--color-mist) 100%);
   --radius: 0.625rem;
   
-  /* Shadcn UI colors adapted for space theme */
-  --background: var(--color-cosmic-void);
-  --foreground: var(--color-stardust);
-  --card: var(--color-nebula-dark);
-  --card-foreground: var(--color-stardust);
-  --popover: var(--color-nebula-dark);
-  --popover-foreground: var(--color-stardust);
-  --primary: var(--color-aurora);
-  --primary-foreground: var(--color-cosmic-void);
-  --secondary: var(--color-stellar-blue);
-  --secondary-foreground: var(--color-stardust);
-  --muted: var(--color-asteroid);
-  --muted-foreground: var(--color-moonbeam);
-  --accent: var(--color-plasma);
-  --accent-foreground: var(--color-cosmic-void);
+  /* Shadcn UI colors adapted for Everforest theme */
+  --background: var(--color-forest-deep);
+  --foreground: var(--color-snow);
+  --card: var(--color-pine-dark);
+  --card-foreground: var(--color-snow);
+  --popover: var(--color-pine-dark);
+  --popover-foreground: var(--color-snow);
+  --primary: var(--color-spring);
+  --primary-foreground: var(--color-forest-deep);
+  --secondary: var(--color-forest-mid);
+  --secondary-foreground: var(--color-snow);
+  --muted: var(--color-stone);
+  --muted-foreground: var(--color-mist);
+  --accent: var(--color-bloom);
+  --accent-foreground: var(--color-forest-deep);
   --destructive: var(--color-error);
-  --border: var(--color-stellar-blue);
-  --input: var(--color-stellar-blue);
-  --ring: var(--color-aurora);
-  --chart-1: var(--color-aurora);
-  --chart-2: var(--color-plasma);
-  --chart-3: var(--color-stellar-blue);
-  --chart-4: var(--color-cosmic-blue);
-  --chart-5: var(--color-moonbeam);
-  --sidebar: var(--color-nebula-dark);
-  --sidebar-foreground: var(--color-stardust);
-  --sidebar-primary: var(--color-aurora);
-  --sidebar-primary-foreground: var(--color-cosmic-void);
-  --sidebar-accent: var(--color-stellar-blue);
-  --sidebar-accent-foreground: var(--color-stardust);
-  --sidebar-border: var(--color-stellar-blue);
-  --sidebar-ring: var(--color-aurora);
+  --border: var(--color-forest-mid);
+  --input: var(--color-forest-mid);
+  --ring: var(--color-spring);
+  --chart-1: var(--color-spring);
+  --chart-2: var(--color-bloom);
+  --chart-3: var(--color-forest-mid);
+  --chart-4: var(--color-sage);
+  --chart-5: var(--color-mist);
+  --sidebar: var(--color-pine-dark);
+  --sidebar-foreground: var(--color-snow);
+  --sidebar-primary: var(--color-spring);
+  --sidebar-primary-foreground: var(--color-forest-deep);
+  --sidebar-accent: var(--color-forest-mid);
+  --sidebar-accent-foreground: var(--color-snow);
+  --sidebar-border: var(--color-forest-mid);
+  --sidebar-ring: var(--color-spring);
 }
 
 /* Base styles */
@@ -77,8 +77,8 @@
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-  background-color: var(--color-cosmic-void);
-  color: var(--color-stardust);
+  background-color: var(--color-forest-deep);
+  color: var(--color-snow);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -89,37 +89,37 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cosmic-void);
+  background: var(--color-forest-deep);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-stellar-blue);
+  background: var(--color-forest-mid);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-cosmic-blue);
+  background: var(--color-sage);
 }
 
 /* Selection styling */
 ::selection {
-  background-color: var(--color-aurora);
-  color: var(--color-cosmic-void);
+  background-color: var(--color-spring);
+  color: var(--color-forest-deep);
 }
 
 /* Utility classes for the color palette */
-.bg-cosmic-void { background-color: var(--color-cosmic-void); }
-.bg-nebula-dark { background-color: var(--color-nebula-dark); }
-.bg-stellar-blue { background-color: var(--color-stellar-blue); }
-.bg-cosmic-blue { background-color: var(--color-cosmic-blue); }
+.bg-forest-deep { background-color: var(--color-forest-deep); }
+.bg-pine-dark { background-color: var(--color-pine-dark); }
+.bg-forest-mid { background-color: var(--color-forest-mid); }
+.bg-sage { background-color: var(--color-sage); }
 
-.text-stardust { color: var(--color-stardust); }
-.text-moonbeam { color: var(--color-moonbeam); }
-.text-aurora { color: var(--color-aurora); }
-.text-plasma { color: var(--color-plasma); }
+.text-snow { color: var(--color-snow); }
+.text-mist { color: var(--color-mist); }
+.text-spring { color: var(--color-spring); }
+.text-bloom { color: var(--color-bloom); }
 
-.border-stellar { border-color: var(--color-stellar-blue); }
-.border-aurora { border-color: var(--color-aurora); }
+.border-forest { border-color: var(--color-forest-mid); }
+.border-spring { border-color: var(--color-spring); }
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
@@ -160,38 +160,38 @@ body {
 }
 
 .dark {
-  /* Dark theme uses the same space colors but with slightly different contrast */
-  --background: var(--color-cosmic-void);
-  --foreground: var(--color-stardust);
-  --card: var(--color-stellar-blue);
-  --card-foreground: var(--color-stardust);
-  --popover: var(--color-stellar-blue);
-  --popover-foreground: var(--color-stardust);
-  --primary: var(--color-aurora);
-  --primary-foreground: var(--color-cosmic-void);
-  --secondary: var(--color-asteroid);
-  --secondary-foreground: var(--color-stardust);
-  --muted: var(--color-asteroid);
-  --muted-foreground: var(--color-moonbeam);
-  --accent: var(--color-plasma);
-  --accent-foreground: var(--color-cosmic-void);
+  /* Dark theme uses enhanced forest colors with better contrast */
+  --background: var(--color-forest-deep);
+  --foreground: var(--color-snow);
+  --card: var(--color-forest-mid);
+  --card-foreground: var(--color-snow);
+  --popover: var(--color-forest-mid);
+  --popover-foreground: var(--color-snow);
+  --primary: var(--color-spring);
+  --primary-foreground: var(--color-forest-deep);
+  --secondary: var(--color-stone);
+  --secondary-foreground: var(--color-snow);
+  --muted: var(--color-stone);
+  --muted-foreground: var(--color-mist);
+  --accent: var(--color-bloom);
+  --accent-foreground: var(--color-forest-deep);
   --destructive: var(--color-error);
-  --border: var(--color-stellar-blue);
-  --input: var(--color-stellar-blue);
-  --ring: var(--color-aurora);
-  --chart-1: var(--color-aurora);
-  --chart-2: var(--color-plasma);
-  --chart-3: var(--color-stellar-blue);
-  --chart-4: var(--color-cosmic-blue);
-  --chart-5: var(--color-moonbeam);
-  --sidebar: var(--color-stellar-blue);
-  --sidebar-foreground: var(--color-stardust);
-  --sidebar-primary: var(--color-aurora);
-  --sidebar-primary-foreground: var(--color-cosmic-void);
-  --sidebar-accent: var(--color-asteroid);
-  --sidebar-accent-foreground: var(--color-stardust);
-  --sidebar-border: var(--color-stellar-blue);
-  --sidebar-ring: var(--color-aurora);
+  --border: var(--color-forest-mid);
+  --input: var(--color-forest-mid);
+  --ring: var(--color-spring);
+  --chart-1: var(--color-spring);
+  --chart-2: var(--color-bloom);
+  --chart-3: var(--color-forest-mid);
+  --chart-4: var(--color-sage);
+  --chart-5: var(--color-mist);
+  --sidebar: var(--color-forest-mid);
+  --sidebar-foreground: var(--color-snow);
+  --sidebar-primary: var(--color-spring);
+  --sidebar-primary-foreground: var(--color-forest-deep);
+  --sidebar-accent: var(--color-stone);
+  --sidebar-accent-foreground: var(--color-snow);
+  --sidebar-border: var(--color-forest-mid);
+  --sidebar-ring: var(--color-spring);
 }
 
 @layer base {

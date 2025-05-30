@@ -7,52 +7,49 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Space-themed color palette
-        cosmic: {
-          void: '#0B0E1A',
-          dark: '#1A1F3A',
-          blue: '#4A7BA7',
+        // Everforest-inspired color palette
+        forest: {
+          deep: '#232A2E',
+          mid: '#343F44',
         },
-        nebula: {
-          dark: '#1A1F3A',
+        pine: {
+          dark: '#2D353B',
         },
-        stellar: {
-          blue: '#2D4A7A',
-        },
-        stardust: '#E8F4FD',
-        moonbeam: '#B8D4F0',
-        aurora: '#7DD3FC',
-        plasma: '#A78BFA',
-        asteroid: '#374151',
-        meteor: '#6B7280',
-        satellite: '#9CA3AF',
-        'cosmic-dust': '#D1D5DB',
+        sage: '#3D484D',
+        snow: '#D3C6AA',
+        mist: '#A7C080',
+        spring: '#83C092',
+        bloom: '#E67E80',
+        stone: '#4F585E',
+        bark: '#859289',
+        moss: '#9DA9A0',
+        fog: '#C5CDD0',
       },
       backgroundImage: {
-        'cosmic-gradient': 'linear-gradient(135deg, #0B0E1A 0%, #1A1F3A 50%, #2D4A7A 100%)',
-        'aurora-gradient': 'linear-gradient(135deg, #7DD3FC 0%, #A78BFA 100%)',
-        'stardust-gradient': 'linear-gradient(135deg, #E8F4FD 0%, #B8D4F0 100%)',
-        'nebula-gradient': 'linear-gradient(180deg, #0B0E1A 0%, #1A1F3A 100%)',
+        'forest-gradient': 'linear-gradient(135deg, #232A2E 0%, #2D353B 50%, #343F44 100%)',
+        'spring-gradient': 'linear-gradient(135deg, #83C092 0%, #A7C080 100%)',
+        'mist-gradient': 'linear-gradient(135deg, #D3C6AA 0%, #A7C080 100%)',
+        'nature-gradient': 'linear-gradient(180deg, #232A2E 0%, #2D353B 100%)',
       },
       fontFamily: {
-        'space': ['Inter', 'system-ui', 'sans-serif'],
+        'nature': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
-        'float': 'float 6s ease-in-out infinite',
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
-        'twinkle': 'twinkle 3s ease-in-out infinite',
+        'sway': 'sway 4s ease-in-out infinite',
+        'glow': 'glow 2s ease-in-out infinite alternate',
+        'breathe': 'breathe 3s ease-in-out infinite',
       },
       keyframes: {
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-10px)' },
+        sway: {
+          '0%, 100%': { transform: 'translateX(0px) rotate(0deg)' },
+          '50%': { transform: 'translateX(5px) rotate(1deg)' },
         },
-        'pulse-glow': {
-          '0%': { boxShadow: '0 0 5px rgba(125, 211, 252, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(125, 211, 252, 0.8)' },
+        glow: {
+          '0%': { boxShadow: '0 0 5px rgba(131, 192, 146, 0.5)' },
+          '100%': { boxShadow: '0 0 20px rgba(131, 192, 146, 0.8)' },
         },
-        twinkle: {
-          '0%, 100%': { opacity: '0.3' },
+        breathe: {
+          '0%, 100%': { opacity: '0.7' },
           '50%': { opacity: '1' },
         },
       },
