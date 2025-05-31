@@ -1,3 +1,4 @@
+import { AnimatedContainer, AnimatedItem, PageTransition } from '@/components/PageTransition';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -166,28 +167,35 @@ export default function ColorsPage() {
   );
 
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-6">
-        <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-spring to-mist rounded-2xl mb-4">
-          <div className="w-8 h-8 bg-forest-deep rounded-lg"></div>
-        </div>
-        <h1 className="font-title text-4xl font-bold text-snow drop-shadow-lg">
-          Everforest Color Palette
-        </h1>
-        <p className="text-lg text-mist max-w-3xl mx-auto leading-relaxed">
-          Explore the nature-inspired color system that brings this portfolio to life. 
-          Each color is thoughtfully chosen to create warmth, accessibility, and visual harmony 
-          reminiscent of a tranquil forest landscape.
-        </p>
-        <div className="flex flex-wrap justify-center gap-2 mt-6">
-          <Badge className="bg-spring text-forest-deep">WCAG AA Compliant</Badge>
-          <Badge variant="outline" className="border-mist text-mist">Nature Inspired</Badge>
-          <Badge variant="outline" className="border-bloom text-bloom">Modern Design</Badge>
-        </div>
-      </div>
+    <PageTransition>
+      <div className="space-y-8">
+        <AnimatedContainer>
+          <AnimatedItem>
+            <div className="text-center space-y-6">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-spring to-mist rounded-2xl mb-4">
+                <div className="w-8 h-8 bg-forest-deep rounded-lg"></div>
+              </div>
+              <h1 className="font-title text-4xl font-bold text-snow drop-shadow-lg">
+                Everforest Color Palette
+              </h1>
+              <p className="text-lg text-mist max-w-3xl mx-auto leading-relaxed">
+                Explore the nature-inspired color system that brings this portfolio to life. 
+                Each color is thoughtfully chosen to create warmth, accessibility, and visual harmony 
+                reminiscent of a tranquil forest landscape.
+              </p>
+              <div className="flex flex-wrap justify-center gap-2 mt-6">
+                <Badge className="bg-spring text-forest-deep">WCAG AA Compliant</Badge>
+                <Badge variant="outline" className="border-mist text-mist">Nature Inspired</Badge>
+                <Badge variant="outline" className="border-bloom text-bloom">Modern Design</Badge>
+              </div>
+            </div>
+          </AnimatedItem>
+        </AnimatedContainer>
 
-      {/* Color Inspiration */}
-      <Card className="p-6 bg-pine-dark border-forest-mid">
+        <AnimatedContainer>
+          {/* Color Inspiration */}
+          <AnimatedItem>
+            <Card className="p-6 bg-pine-dark border-forest-mid">
         <h2 className="font-title text-xl font-semibold text-snow mb-4">Design Philosophy</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -206,9 +214,13 @@ export default function ColorsPage() {
           </div>
         </div>
       </Card>
+          </AnimatedItem>
+        </AnimatedContainer>
 
-      {/* Primary Colors - Forest Foundation */}
-      <div className="space-y-6">
+        <AnimatedContainer>
+          {/* Primary Colors - Forest Foundation */}
+          <AnimatedItem>
+            <div className="space-y-6">
         <div>
           <h2 className="font-title text-2xl font-semibold text-snow mb-2">Primary Colors</h2>
           <p className="text-mist">Forest foundation colors that form the base of the design</p>
@@ -219,9 +231,11 @@ export default function ColorsPage() {
           ))}
         </div>
       </div>
+          </AnimatedItem>
 
-      {/* Accent Colors */}
-      <div className="space-y-6">
+          {/* Accent Colors */}
+          <AnimatedItem>
+            <div className="space-y-6">
         <div>
           <h2 className="font-title text-2xl font-semibold text-snow mb-2">Accent Colors</h2>
           <p className="text-mist">Nature highlights that add life and personality</p>
@@ -232,9 +246,11 @@ export default function ColorsPage() {
           ))}
         </div>
       </div>
+          </AnimatedItem>
 
-      {/* Neutral Colors */}
-      <div className="space-y-6">
+          {/* Neutral Colors */}
+          <AnimatedItem>
+            <div className="space-y-6">
         <div>
           <h2 className="font-title text-2xl font-semibold text-snow mb-2">Neutral Colors</h2>
           <p className="text-mist">Natural grays with warm undertones for functional elements</p>
@@ -258,9 +274,11 @@ export default function ColorsPage() {
           ))}
         </div>
       </div>
+          </AnimatedItem>
 
-      {/* Gradients */}
-      <div className="space-y-6">
+          {/* Gradients */}
+          <AnimatedItem>
+            <div className="space-y-6">
         <div>
           <h2 className="font-title text-2xl font-semibold text-snow mb-2">Gradients</h2>
           <p className="text-mist">Beautiful gradients that add depth and visual interest</p>
@@ -271,9 +289,11 @@ export default function ColorsPage() {
           ))}
         </div>
       </div>
+          </AnimatedItem>
 
-      {/* Color Harmonies */}
-      <div className="space-y-6">
+          {/* Color Harmonies */}
+          <AnimatedItem>
+            <div className="space-y-6">
         <div>
           <h2 className="font-title text-2xl font-semibold text-snow mb-2">Color Harmonies</h2>
           <p className="text-mist">Complementary color combinations used throughout the design</p>
@@ -456,9 +476,11 @@ export default function ColorsPage() {
           </Card>
         </div>
       </div>
+          </AnimatedItem>
 
-      {/* Implementation Guide */}
-      <Card className="p-6 bg-pine-dark border-forest-mid">
+          {/* Implementation Guide */}
+          <AnimatedItem>
+            <Card className="p-6 bg-pine-dark border-forest-mid">
         <h2 className="text-xl font-semibold text-snow mb-4">Implementation</h2>
         <div className="space-y-4">
           <div>
@@ -497,6 +519,9 @@ export default function ColorsPage() {
           </div>
         </div>
       </Card>
-    </div>
+          </AnimatedItem>
+        </AnimatedContainer>
+      </div>
+    </PageTransition>
   );
 }

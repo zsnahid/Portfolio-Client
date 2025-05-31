@@ -1,3 +1,4 @@
+import { AnimatedContainer, AnimatedItem, PageTransition } from '@/components/PageTransition';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ExternalLink, Github, Linkedin, Mail, MapPin, Phone, Send } from 'lucide-react';
@@ -62,17 +63,24 @@ export default function ContactPage() {
   ];
 
   return (
-    <div className="space-y-8">
-      <div className="text-center space-y-4">
-        <h1 className="font-title text-3xl font-bold text-snow">Get In Touch</h1>
-        <p className="text-lg text-mist max-w-3xl mx-auto">
-          I'm always interested in new opportunities and collaborations. Let's connect and discuss how we can work together.
-        </p>
-      </div>
+    <PageTransition>
+      <div className="space-y-8">
+        <AnimatedContainer>
+          <AnimatedItem>
+            <div className="text-center space-y-4">
+              <h1 className="font-title text-3xl font-bold text-snow">Get In Touch</h1>
+              <p className="text-lg text-mist max-w-3xl mx-auto">
+                I'm always interested in new opportunities and collaborations. Let's connect and discuss how we can work together.
+              </p>
+            </div>
+          </AnimatedItem>
+        </AnimatedContainer>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Contact Form */}
-        <Card className="p-6 bg-pine-dark border-forest-mid">
+        <AnimatedContainer>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Contact Form */}
+            <AnimatedItem>
+              <Card className="p-6 bg-pine-dark border-forest-mid">
           <h2 className="font-title text-xl font-semibold text-snow mb-6">Send a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -148,11 +156,12 @@ export default function ContactPage() {
               <Send className="w-4 h-4 mr-2" />
               Send Message
             </Button>
-          </form>
-        </Card>
+          </form>              </Card>
+            </AnimatedItem>
 
-        {/* Contact Information */}
-        <div className="space-y-6">
+            {/* Contact Information */}
+            <AnimatedItem>
+              <div className="space-y-6">
           <Card className="p-6 bg-pine-dark border-forest-mid">
             <h2 className="font-title text-xl font-semibold text-snow mb-6">Contact Information</h2>
             <div className="space-y-4">
@@ -218,9 +227,12 @@ export default function ContactPage() {
               <li>• Technical mentoring</li>
               <li>• Open source contributions</li>
             </ul>
-          </Card>
-        </div>
+            </Card>
+          </div>
+            </AnimatedItem>
+          </div>
+        </AnimatedContainer>
       </div>
-    </div>
+    </PageTransition>
   );
 }

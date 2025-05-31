@@ -43,7 +43,7 @@ export function Sidebar({ className }: SidebarProps) {
   return (
     <div 
       className={cn(
-        "relative h-screen bg-pine-dark border-r border-forest-mid transition-all duration-500 ease-in-out shadow-xl",
+        "relative h-screen bg-pine-dark border-r border-forest-mid transition-all duration-500 ease-in-out",
         isCollapsed ? "w-16" : "w-64",
         className
       )}
