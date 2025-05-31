@@ -64,7 +64,7 @@ export default function ContactPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-snow">Get In Touch</h1>
+        <h1 className="font-title text-3xl font-bold text-snow">Get In Touch</h1>
         <p className="text-lg text-mist max-w-3xl mx-auto">
           I'm always interested in new opportunities and collaborations. Let's connect and discuss how we can work together.
         </p>
@@ -73,7 +73,7 @@ export default function ContactPage() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Contact Form */}
         <Card className="p-6 bg-pine-dark border-forest-mid">
-          <h2 className="text-xl font-semibold text-snow mb-6">Send a Message</h2>
+          <h2 className="font-title text-xl font-semibold text-snow mb-6">Send a Message</h2>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
@@ -153,7 +153,7 @@ export default function ContactPage() {
         {/* Contact Information */}
         <div className="space-y-6">
           <Card className="p-6 bg-pine-dark border-forest-mid">
-            <h2 className="text-xl font-semibold text-snow mb-6">Contact Information</h2>
+            <h2 className="font-title text-xl font-semibold text-snow mb-6">Contact Information</h2>
             <div className="space-y-4">
               {contactInfo.map((info, index) => {
                 const Icon = info.icon;
@@ -182,7 +182,7 @@ export default function ContactPage() {
           </Card>
 
           <Card className="p-6 bg-pine-dark border-forest-mid">
-            <h2 className="text-xl font-semibold text-snow mb-6">Follow Me</h2>
+            <h2 className="font-title text-xl font-semibold text-snow mb-6">Follow Me</h2>
             <div className="space-y-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon;
@@ -207,7 +207,7 @@ export default function ContactPage() {
           </Card>
 
           <Card className="p-6 bg-pine-dark border-forest-mid">
-            <h2 className="text-xl font-semibold text-snow mb-4">Let's Collaborate</h2>
+            <h2 className="font-title text-xl font-semibold text-snow mb-4">Let's Collaborate</h2>
             <p className="text-mist mb-4">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>

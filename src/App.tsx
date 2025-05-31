@@ -8,6 +8,7 @@ const HomePage = lazy(() => import('@/pages/HomePage'));
 const AboutPage = lazy(() => import('@/pages/AboutPage'));
 const ExperiencePage = lazy(() => import('@/pages/ExperiencePage'));
 const ProjectsPage = lazy(() => import('@/pages/ProjectsPage'));
+const ColorsPage = lazy(() => import('@/pages/ColorsPage'));
 const BlogPage = lazy(() => import('@/pages/BlogPage'));
 const ContactPage = lazy(() => import('@/pages/ContactPage'));
 
@@ -45,6 +46,14 @@ function App() {
             element={
               <Suspense fallback={<LoadingSpinner />}>
                 <ProjectsPage />
+              </Suspense>
+            } 
+          />
+          <Route 
+            path="colors" 
+            element={
+              <Suspense fallback={<LoadingSpinner />}>
+                <ColorsPage />
               </Suspense>
             } 
           />

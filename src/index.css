@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import 'tailwindcss';
 @import "tw-animate-css";
 
@@ -74,7 +75,7 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  font-family: var(--font-body);
   background-color: var(--color-forest-deep);
   color: var(--color-snow);
   line-height: 1.6;
@@ -141,8 +142,65 @@ body {
   transform: translateX(100%);
 }
 
+/* Glow effects for active navigation items */
+.nav-glow {
+  box-shadow: 
+    0 0 8px rgba(131, 192, 146, 0.15),
+    0 0 12px rgba(131, 192, 146, 0.1),
+    0 0 16px rgba(131, 192, 146, 0.05);
+  animation: nav-glow-pulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes nav-glow-pulse {
+  0% { 
+    box-shadow: 
+      0 0 6px rgba(131, 192, 146, 0.12),
+      0 0 10px rgba(131, 192, 146, 0.08),
+      0 0 14px rgba(131, 192, 146, 0.04);
+  }
+  100% { 
+    box-shadow: 
+      0 0 10px rgba(131, 192, 146, 0.18),
+      0 0 14px rgba(131, 192, 146, 0.12),
+      0 0 18px rgba(131, 192, 146, 0.06);
+  }
+}
+
+.glow-spring {
+  box-shadow: 
+    0 0 10px rgba(131, 192, 146, 0.3),
+    0 0 20px rgba(131, 192, 146, 0.2),
+    0 0 30px rgba(131, 192, 146, 0.1);
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+.glow-bloom {
+  box-shadow: 
+    0 0 10px rgba(230, 126, 128, 0.3),
+    0 0 20px rgba(230, 126, 128, 0.2),
+    0 0 30px rgba(230, 126, 128, 0.1);
+  animation: glow-pulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow-pulse {
+  0% { 
+    box-shadow: 
+      0 0 8px rgba(131, 192, 146, 0.25),
+      0 0 16px rgba(131, 192, 146, 0.15),
+      0 0 24px rgba(131, 192, 146, 0.08);
+  }
+  100% { 
+    box-shadow: 
+      0 0 12px rgba(131, 192, 146, 0.35),
+      0 0 24px rgba(131, 192, 146, 0.25),
+      0 0 36px rgba(131, 192, 146, 0.15);
+  }
+}
+
 
 @theme inline {
+  --font-title: Montserrat Alternates, sans-serif;
+  --font-body: Geist, sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);

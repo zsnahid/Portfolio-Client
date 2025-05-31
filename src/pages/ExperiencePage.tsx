@@ -33,7 +33,7 @@ export default function ExperiencePage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-snow">Experience</h1>
+        <h1 className="text-3xl font-bold text-snow font-title">Experience</h1>
         <p className="text-lg text-mist max-w-3xl mx-auto">
           My professional journey and the experiences that have shaped my career.
         </p>
@@ -44,7 +44,7 @@ export default function ExperiencePage() {
           <Card key={index} className="p-6 bg-pine-dark border-forest-mid hover:border-spring transition-colors">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
               <div>
-                <h3 className="text-xl font-semibold text-snow">{exp.title}</h3>
+                <h3 className="text-xl font-semibold text-snow font-title">{exp.title}</h3>
                 <p className="text-spring font-medium">{exp.company}</p>
               </div>
               <div className="flex flex-col md:items-end space-y-1 mt-2 md:mt-0">

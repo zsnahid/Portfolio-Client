@@ -48,7 +48,7 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-snow">Projects</h1>
+        <h1 className="text-3xl font-bold text-snow font-title">Projects</h1>
         <p className="text-lg text-mist max-w-3xl mx-auto">
           A showcase of my recent work and side projects that demonstrate my skills and passion for development.
         </p>
@@ -56,7 +56,7 @@ export default function ProjectsPage() {
 
       {/* Featured Projects */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-semibold text-snow">Featured Projects</h2>
+        <h2 className="text-2xl font-semibold text-snow font-title">Featured Projects</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {featuredProjects.map((project, index) => (
             <Card key={index} className="overflow-hidden bg-pine-dark border-forest-mid hover:border-spring transition-colors group">
@@ -68,7 +68,7 @@ export default function ProjectsPage() {
                 />
               </div>
               <div className="p-6 space-y-4">
-                <h3 className="text-xl font-semibold text-snow">{project.title}</h3>
+                <h3 className="text-xl font-semibold text-snow font-title">{project.title}</h3>
                 <p className="text-mist">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2">
@@ -107,12 +107,12 @@ export default function ProjectsPage() {
 
       {/* Other Projects */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-semibold text-snow">Other Projects</h2>
+        <h2 className="text-2xl font-semibold text-snow font-title">Other Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {otherProjects.map((project, index) => (
             <Card key={index} className="p-6 bg-pine-dark border-forest-mid hover:border-spring transition-colors">
               <div className="space-y-4">
-                <h3 className="text-lg font-semibold text-snow">{project.title}</h3>
+                <h3 className="text-lg font-semibold text-snow font-title">{project.title}</h3>
                 <p className="text-mist text-sm">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-1">

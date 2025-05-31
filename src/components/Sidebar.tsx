@@ -10,6 +10,7 @@ import {
   Home,
   Linkedin,
   Mail,
+  Palette,
   User
 } from 'lucide-react';
 import { useState } from 'react';
@@ -25,6 +26,7 @@ const navigationItems = [
   { path: '/about', label: 'About', icon: User },
   { path: '/experience', label: 'Experience', icon: Briefcase },
   { path: '/projects', label: 'Projects', icon: Code },
+  { path: '/colors', label: 'Colors', icon: Palette },
   { path: '/blog', label: 'Blog', icon: FileText },
   { path: '/contact', label: 'Contact', icon: Mail },
 ];
@@ -74,7 +76,7 @@ export function Sidebar({ className }: SidebarProps) {
                 "min-w-0 transition-all duration-300 overflow-hidden",
                 isCollapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
               )}>
-                <h2 className="text-sm font-semibold text-snow leading-tight tracking-wide whitespace-nowrap">Zahid Sadman</h2>
+                <h2 className="font-title text-sm font-semibold text-snow leading-tight tracking-wide whitespace-nowrap">Zahid Sadman</h2>
                 <p className="text-xs text-mist/80 leading-relaxed mt-0.5 whitespace-nowrap">Full Stack Developer</p>
               </div>
             </div>
@@ -104,7 +106,7 @@ export function Sidebar({ className }: SidebarProps) {
                       ? "justify-center h-10 w-10 mx-auto" 
                       : "px-3.5 py-2.5",
                     isActive 
-                      ? "bg-gradient-to-r from-spring to-mist text-forest-deep font-medium shadow-md ring-1 ring-spring/30" 
+                      ? "bg-gradient-to-r from-spring to-mist text-forest-deep font-medium nav-glow" 
                       : "text-mist hover:bg-forest-mid/60 hover:text-snow hover:shadow-sm"
                   )}
                   title={isCollapsed ? item.label : undefined}

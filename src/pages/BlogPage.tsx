@@ -52,7 +52,7 @@ export default function BlogPage() {
   return (
     <div className="space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-3xl font-bold text-snow">Blog</h1>
+        <h1 className="text-3xl font-bold text-snow font-title">Blog</h1>
         <p className="text-lg text-mist max-w-3xl mx-auto">
           Thoughts, tutorials, and insights about web development, technology, and programming best practices.
         </p>
@@ -60,7 +60,7 @@ export default function BlogPage() {
 
       {/* Featured Posts */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-semibold text-snow">Featured Posts</h2>
+        <h2 className="text-2xl font-semibold text-snow font-title">Featured Posts</h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {featuredPosts.map((post, index) => (
             <Card key={index} className="p-6 bg-pine-dark border-forest-mid hover:border-spring transition-all duration-200 group cursor-pointer">
@@ -80,7 +80,7 @@ export default function BlogPage() {
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold text-snow group-hover:text-spring transition-colors">
+                <h3 className="text-xl font-semibold text-snow group-hover:text-spring transition-colors font-title">
                   {post.title}
                 </h3>
                 
@@ -106,13 +106,13 @@ export default function BlogPage() {
 
       {/* Recent Posts */}
       <div className="space-y-6">
-        <h2 className="text-2xl font-semibold text-snow">Recent Posts</h2>
+        <h2 className="text-2xl font-semibold text-snow font-title">Recent Posts</h2>
         <div className="space-y-4">
           {recentPosts.map((post, index) => (
             <Card key={index} className="p-6 bg-pine-dark border-forest-mid hover:border-spring transition-all duration-200 group cursor-pointer">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                 <div className="flex-1 space-y-2">
-                  <h3 className="text-lg font-semibold text-snow group-hover:text-spring transition-colors">
+                  <h3 className="text-lg font-semibold text-snow group-hover:text-spring transition-colors font-title">
                     {post.title}
                   </h3>
                   <p className="text-mist text-sm">{post.excerpt}</p>
