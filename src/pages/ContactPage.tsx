@@ -142,7 +142,8 @@ export default function ContactPage() {
             
             <Button 
               type="submit" 
-              className="w-full bg-spring hover:bg-mist text-forest-deep font-medium"
+              variant="gradient"
+              className="w-full"
             >
               <Send className="w-4 h-4 mr-2" />
               Send Message

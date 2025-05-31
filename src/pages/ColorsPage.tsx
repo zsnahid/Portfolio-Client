@@ -1,4 +1,5 @@
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Check, Copy } from 'lucide-react';
 import { useState } from 'react';
@@ -382,15 +383,15 @@ export default function ColorsPage() {
           <Card className="p-6 bg-pine-dark border-forest-mid">
             <h3 className="text-lg font-semibold text-snow mb-4">Button Styles</h3>
             <div className="space-y-3">
-              <button className="px-4 py-2 bg-spring text-forest-deep rounded-lg hover:bg-mist transition-colors font-medium">
+              <Button variant="theme" className="w-full">
                 Primary Button
-              </button>
-              <button className="px-4 py-2 border border-spring text-spring rounded-lg hover:bg-spring hover:text-forest-deep transition-colors">
+              </Button>
+              <Button variant="theme-outline" className="w-full">
                 Secondary Button
-              </button>
-              <button className="px-4 py-2 bg-forest-mid text-snow rounded-lg hover:bg-sage transition-colors">
+              </Button>
+              <Button variant="default" className="w-full">
                 Neutral Button
-              </button>
+              </Button>
             </div>
           </Card>
 

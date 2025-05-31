@@ -1,5 +1,7 @@
 import { cn } from '@/lib/utils';
-import { Briefcase, Code, ExternalLink, FileText, Github, Home, Linkedin, Mail, Menu, Palette, User, X } from 'lucide-react';
+import { 
+  // Briefcase, 
+  Code, ExternalLink, FileText, Github, Home, Linkedin, Mail, Menu, Palette, User, X } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
@@ -7,7 +9,7 @@ import { ThemeToggle } from './ThemeToggle';
 const navigationItems = [
   { path: '/', label: 'Home', icon: Home },
   { path: '/about', label: 'About', icon: User },
-  { path: '/experience', label: 'Experience', icon: Briefcase },
+  // { path: '/experience', label: 'Experience', icon: Briefcase },
   { path: '/projects', label: 'Projects', icon: Code },
   { path: '/colors', label: 'Colors', icon: Palette },
   { path: '/blog', label: 'Blog', icon: FileText },
