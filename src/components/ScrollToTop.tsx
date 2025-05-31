@@ -28,7 +28,7 @@ export function ScrollToTop() {
   return (
     <button
       className={cn(
-        "fixed bottom-8 right-8 z-50 flex items-center justify-center w-12 h-12 bg-spring hover:bg-mist text-forest-deep rounded-full shadow-lg transition-all duration-300 transform hover:scale-110",
+        "fixed bottom-7 right-7 z-50 flex items-center justify-center w-11 h-11 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 hover:shadow-xl ring-2 ring-spring/20 hover:ring-spring/40",
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8 pointer-events-none"
       )}
       onClick={scrollToTop}

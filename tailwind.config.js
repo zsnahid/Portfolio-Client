@@ -56,6 +56,15 @@ export default {
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
+        '0.5': '0.125rem',  // 2px
+        '1.5': '0.375rem',  // 6px
+        '2.5': '0.625rem',  // 10px
+        '3.5': '0.875rem',  // 14px
+        '4.5': '1.125rem',  // 18px
+        '5.5': '1.375rem',  // 22px
+        '6.5': '1.625rem',  // 26px
+        '7.5': '1.875rem',  // 30px
+        'pb-4.5': '1.125rem', // Custom padding-bottom
       },
       backdropBlur: {
         'xs': '2px',

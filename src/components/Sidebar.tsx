@@ -30,8 +30,8 @@ const navigationItems = [
 ];
 
 const socialLinks = [
-  { href: 'https://github.com', label: 'GitHub', icon: Github },
-  { href: 'https://linkedin.com', label: 'LinkedIn', icon: Linkedin },
+  { href: 'https://github.com/zsnahid', label: 'GitHub', icon: Github },
+  { href: 'https://www.linkedin.com/in/zahidsadmansakib/', label: 'LinkedIn', icon: Linkedin },
 ];
 
 export function Sidebar({ className }: SidebarProps) {
@@ -41,7 +41,7 @@ export function Sidebar({ className }: SidebarProps) {
   return (
     <div 
       className={cn(
-        "relative h-screen bg-pine-dark border-r border-forest-mid transition-all duration-300 ease-in-out",
+        "relative h-screen bg-pine-dark border-r border-forest-mid transition-all duration-300 ease-in-out shadow-xl",
         isCollapsed ? "w-16" : "w-64",
         className
       )}
@@ -49,65 +49,91 @@ export function Sidebar({ className }: SidebarProps) {
       {/* Toggle Button */}
       <button
         onClick={() => setIsCollapsed(!isCollapsed)}
-        className="absolute -right-3 top-6 z-50 flex h-6 w-6 items-center justify-center rounded-full bg-forest-mid border border-stone hover:bg-sage transition-colors"
+        className="absolute -right-3 top-[66px] z-50 flex h-6.5 w-6.5 items-center justify-center rounded-full bg-forest-mid border border-stone hover:bg-sage hover:border-mist transition-all duration-200 shadow-lg hover:scale-105 active:scale-95"
+        aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
       >
         {isCollapsed ? (
-          <ChevronRight className="h-3 w-3 text-snow" />
+          <ChevronRight className="h-3.5 w-3.5 text-snow" />
         ) : (
-          <ChevronLeft className="h-3 w-3 text-snow" />
+          <ChevronLeft className="h-3.5 w-3.5 text-snow" />
         )}
       </button>
 
       <div className="flex h-full flex-col">
         {/* Header */}
-        <div className="p-6 border-b border-forest-mid">
+        <div className="border-b border-forest-mid/80 px-3 py-5">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-spring text-forest-deep font-bold text-sm">
+            <div className={cn(
+              "flex items-center transition-all duration-300",
+              isCollapsed ? "w-full justify-center" : "space-x-3.5"
+            )}>
+              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-spring to-mist text-forest-deep font-bold text-sm shadow-md ring-2 ring-spring/20">
                 ZS
               </div>
-              {!isCollapsed && (
-                <div>
-                  <h2 className="text-sm font-semibold text-snow">Zahid Sadman</h2>
-                  <p className="text-xs text-mist">Full Stack Developer</p>
-                </div>
-              )}
+              <div className={cn(
+                "min-w-0 transition-all duration-300 overflow-hidden",
+                isCollapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
+              )}>
+                <h2 className="text-sm font-semibold text-snow leading-tight tracking-wide whitespace-nowrap">Zahid Sadman</h2>
+                <p className="text-xs text-mist/80 leading-relaxed mt-0.5 whitespace-nowrap">Full Stack Developer</p>
+              </div>
             </div>
-            {!isCollapsed && <ThemeToggle />}
+            <div className={cn(
+              "ml-2 transition-all duration-300 overflow-hidden",
+              isCollapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
+            )}>
+              <ThemeToggle />
+            </div>
           </div>
         </div>
 
         {/* Navigation */}
-        <nav className="flex-1 p-4 space-y-2">
-          {navigationItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = location.pathname === item.path;
-            
-            return (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={cn(
-                  "flex items-center space-x-3 rounded-lg px-3 py-2 text-sm transition-all duration-200",
-                  isActive 
-                    ? "bg-spring text-forest-deep font-medium" 
-                    : "text-mist hover:bg-forest-mid hover:text-snow",
-                  isCollapsed && "justify-center"
-                )}
-              >
-                <Icon className={cn("h-4 w-4", isCollapsed ? "h-5 w-5" : "")} />
-                {!isCollapsed && <span>{item.label}</span>}
-              </Link>
-            );
-          })}
+        <nav className="flex-1 py-6 px-3">
+          <div className="flex flex-col gap-2">
+            {navigationItems.map((item) => {
+              const Icon = item.icon;
+              const isActive = location.pathname === item.path;
+              
+              return (
+                <Link
+                  key={item.path}
+                  to={item.path}
+                  className={cn(
+                    "sidebar-nav-item group flex items-center rounded-xl transition-all duration-300 relative",
+                    isCollapsed 
+                      ? "justify-center h-10 w-10 mx-auto" 
+                      : "px-3.5 py-2.5",
+                    isActive 
+                      ? "bg-gradient-to-r from-spring to-mist text-forest-deep font-medium shadow-md ring-1 ring-spring/30" 
+                      : "text-mist hover:bg-forest-mid/60 hover:text-snow hover:shadow-sm"
+                  )}
+                  title={isCollapsed ? item.label : undefined}
+                >
+                  <Icon className={cn(
+                    "transition-all duration-300 flex-shrink-0",
+                    isCollapsed ? "h-5 w-5" : "h-4.5 w-4.5",
+                    isActive ? "text-forest-deep" : "group-hover:scale-110"
+                  )} />
+                  <span className={cn(
+                    "text-sm font-medium tracking-wide leading-none whitespace-nowrap transition-all duration-300 overflow-hidden ml-3.5",
+                    isCollapsed ? "opacity-0 w-0 ml-0" : "opacity-100 w-auto"
+                  )}>
+                    {item.label}
+                  </span>
+                  {/* Active indicator for collapsed state */}
+                  {isActive && isCollapsed && (
+                    <div className="absolute -right-1.5 top-1/2 -translate-y-1/2 w-1 h-5 bg-spring rounded-full shadow-sm"></div>
+                  )}
+                </Link>
+              );
+            })}
+          </div>
         </nav>
 
         {/* Social Links */}
-        <div className="p-4 border-t border-forest-mid">
-          <div className={cn(
-            "flex space-x-2",
-            isCollapsed ? "flex-col space-x-0 space-y-2" : "justify-center"
-          )}>
+        <div className="border-t border-forest-mid/80 px-3 py-4">
+          {/* Social Links Container */}
+          <div className="flex justify-center gap-3.5">
             {socialLinks.map((link) => {
               const Icon = link.icon;
               return (
@@ -116,24 +142,28 @@ export function Sidebar({ className }: SidebarProps) {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={cn(
-                    "flex items-center justify-center rounded-lg p-2 text-mist hover:bg-forest-mid hover:text-spring transition-colors",
-                    isCollapsed ? "w-full" : "w-8 h-8"
-                  )}
+                  className="group flex items-center justify-center rounded-lg transition-all duration-300 hover:shadow-md w-9 h-9 text-mist/80 hover:bg-forest-mid/60 hover:text-spring hover:scale-105"
                   title={link.label}
                 >
-                  <Icon className="h-4 w-4" />
-                  {!isCollapsed && <ExternalLink className="ml-1 h-3 w-3" />}
+                  <Icon className="h-4.5 w-4.5 transition-transform duration-200 group-hover:scale-110" />
+                  <ExternalLink className={cn(
+                    "h-3 w-3 transition-all duration-300 overflow-hidden ml-1.5",
+                    isCollapsed ? "opacity-0 w-0 ml-0" : "opacity-60 w-auto group-hover:opacity-100"
+                  )} />
                 </a>
               );
             })}
           </div>
           
-          {!isCollapsed && (
-            <div className="mt-4 text-center">
-              <p className="text-xs text-moss">© 2025 Zahid Sadman</p>
-            </div>
-          )}
+          {/* Copyright */}
+          <div className={cn(
+            "text-center border-t border-forest-mid/40 transition-all duration-300 overflow-hidden",
+            isCollapsed ? "pt-0 mt-0 max-h-0 opacity-0" : "pt-3.5 mt-4 max-h-20 opacity-100"
+          )}>
+            <p className="text-xs text-moss/70 leading-relaxed tracking-wide whitespace-nowrap">
+              © 2025 Zahid Sadman
+            </p>
+          </div>
         </div>
       </div>
     </div>

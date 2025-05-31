@@ -30,13 +30,13 @@ export function ThemeToggle() {
   return (
     <button
       onClick={() => setIsDark(!isDark)}
-      className="flex items-center justify-center w-8 h-8 rounded-lg bg-forest-mid hover:bg-sage transition-colors"
+      className="flex items-center justify-center w-8 h-8 rounded-lg bg-forest-mid hover:bg-sage transition-colors hover:scale-105 hover:shadow-sm active:scale-95"
       aria-label="Toggle theme"
     >
       {isDark ? (
-        <Sun className="h-4 w-4 text-snow" />
+        <Sun className="h-4.5 w-4.5 text-snow transition-transform duration-200" />
       ) : (
-        <Moon className="h-4 w-4 text-snow" />
+        <Moon className="h-4.5 w-4.5 text-snow transition-transform duration-200" />
       )}
     </button>
   );

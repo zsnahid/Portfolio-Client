@@ -16,9 +16,11 @@ export function Layout() {
       <MobileMenu />
       
       <main className="flex-1 overflow-auto">
-        <div className="container mx-auto px-6 py-8 max-w-6xl lg:pl-6 pl-16">
+        <div className="container mx-auto px-6 py-7 max-w-6xl lg:pl-7 pl-16">
           <Breadcrumb />
-          <Outlet />
+          <div className="mt-4">
+            <Outlet />
+          </div>
         </div>
         <ScrollToTop />
       </main>

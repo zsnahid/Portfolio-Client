@@ -70,8 +70,6 @@
 
 /* Base styles */
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -120,6 +118,29 @@ body {
 
 .border-forest { border-color: var(--color-forest-mid); }
 .border-spring { border-color: var(--color-spring); }
+
+
+.sidebar-nav-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.sidebar-nav-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(131, 192, 146, 0.05) 50%, transparent 100%);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar-nav-item:hover::before {
+  transform: translateX(100%);
+}
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
