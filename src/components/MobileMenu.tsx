@@ -7,7 +7,6 @@ import {
   Github,
   Home,
   Linkedin,
-  Mail,
   Menu,
   Palette,
   User,
@@ -24,7 +23,7 @@ const navigationItems = [
   { path: "/projects", label: "Projects", icon: Code },
   { path: "/colors", label: "Colors", icon: Palette },
   { path: "/blog", label: "Blog", icon: FileText },
-  { path: "/contact", label: "Contact", icon: Mail },
+  // { path: "/contact", label: "Contact", icon: Mail },
 ];
 
 const socialLinks = [

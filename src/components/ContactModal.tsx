@@ -56,10 +56,9 @@ export function ContactModal({ children }: ContactModalProps) {
           <div className="mx-auto w-12 h-12 bg-gradient-to-br from-spring to-mist rounded-full flex items-center justify-center">
             <Mail className="w-6 h-6 text-forest-deep" />
           </div>
-          <DialogTitle className="text-xl">Get In Touch</DialogTitle>
-          <DialogDescription className="text-base leading-relaxed">
-            I'd love to hear from you! Connect with me through any of these
-            platforms and let's start a conversation.
+          <DialogTitle className="text-xl text-center">Get In Touch</DialogTitle>
+          <DialogDescription className="text-base text-center leading-relaxed">
+            Let's collaborate and make great projects together
           </DialogDescription>
         </DialogHeader>
 

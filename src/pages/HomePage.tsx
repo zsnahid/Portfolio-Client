@@ -3,6 +3,7 @@ import { PageTransition } from "@/components/PageTransition";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Download, Mail, MapPin } from "lucide-react";
+import profile from "/src/assets/profile.jpeg";
 
 export default function HomePage() {
   return (
@@ -14,7 +15,7 @@ export default function HomePage() {
             <div className="flex justify-center">
               <div className="relative">
                 <img
-                  src="/src/assets/profile.jpeg"
+                  src={profile}
                   alt="Zahid S. Sakib"
                   className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-3 sm:border-4 border-spring/20 shadow-lg object-cover"
                 />
@@ -39,10 +40,10 @@ export default function HomePage() {
             </div>
 
             {/* Bio */}
-            <p className="text-xs sm:text-sm text-mist/90 leading-relaxed px-1 sm:px-2">
+            {/* <p className="text-xs sm:text-sm text-mist/90 leading-relaxed px-1 sm:px-2">
               Passionate about creating beautiful, functional, and user-friendly
               applications. Always learning and exploring new technologies.
-            </p>
+            </p> */}
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 py-3 sm:py-4 border-t border-b border-forest-mid/40">
