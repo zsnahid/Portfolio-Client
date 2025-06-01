@@ -1,8 +1,8 @@
-import { PageTransition } from '@/components/PageTransition';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { Download, Mail, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { ContactModal } from "@/components/ContactModal";
+import { PageTransition } from "@/components/PageTransition";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Download, Mail, MapPin } from "lucide-react";
 
 export default function HomePage() {
   return (
@@ -40,40 +40,55 @@ export default function HomePage() {
 
             {/* Bio */}
             <p className="text-xs sm:text-sm text-mist/90 leading-relaxed px-1 sm:px-2">
-              Passionate about creating beautiful, functional, and user-friendly applications. 
-              Always learning and exploring new technologies.
+              Passionate about creating beautiful, functional, and user-friendly
+              applications. Always learning and exploring new technologies.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-3 sm:gap-4 py-3 sm:py-4 border-t border-b border-forest-mid/40">
               <div className="text-center">
-                <div className="text-base sm:text-lg font-semibold text-snow">5+</div>
+                <div className="text-base sm:text-lg font-semibold text-snow">
+                  5+
+                </div>
                 <div className="text-xs text-mist/80">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-base sm:text-lg font-semibold text-snow">1+</div>
+                <div className="text-base sm:text-lg font-semibold text-snow">
+                  1+
+                </div>
                 <div className="text-xs text-mist/80">Years Exp</div>
               </div>
               <div className="text-center">
-                <div className="text-base sm:text-lg font-semibold text-snow">10+</div>
+                <div className="text-base sm:text-lg font-semibold text-snow">
+                  10+
+                </div>
                 <div className="text-xs text-mist/80">Technologies</div>
               </div>
             </div>
 
             {/* Action Buttons */}
             <div className="space-y-2 sm:space-y-3 pt-1 sm:pt-2">
-              <Link to="/contact" className="block">
-                <Button variant="default" size="sm" className="w-full h-8 sm:h-9 text-xs sm:text-sm">
+              <ContactModal>
+                <Button
+                  variant="default"
+                  size="sm"
+                  className="w-full h-8 sm:h-9 text-xs sm:text-sm"
+                >
                   <Mail className="w-3 h-3 sm:w-4 sm:h-4" />
                   Contact Me
                 </Button>
-              </Link>
-              
-              <Button 
-                variant="secondary" 
+              </ContactModal>
+
+              <Button
+                variant="secondary"
                 size="sm"
                 className="w-full h-8 sm:h-9 text-xs sm:text-sm"
-                onClick={() => window.open('https://drive.google.com/file/d/1PpLO1TvHij0ShDWReaabwCssVqOiRZRB/view?usp=drive_link', '_blank')}
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1PpLO1TvHij0ShDWReaabwCssVqOiRZRB/view?usp=drive_link",
+                    "_blank"
+                  )
+                }
               >
                 <Download className="w-3 h-3 sm:w-4 sm:h-4" />
                 Download Resume
