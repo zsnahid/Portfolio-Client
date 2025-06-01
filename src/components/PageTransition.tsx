@@ -1,5 +1,5 @@
-import { motion } from 'framer-motion';
-import type { ReactNode } from 'react';
+import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 interface PageTransitionProps {
   children: ReactNode;
@@ -11,51 +11,51 @@ const pageVariants = {
     opacity: 0,
     y: 16,
     scale: 0.985,
-    filter: "blur(8px)"
+    filter: "blur(8px)",
   },
   in: {
     opacity: 1,
     y: 0,
     scale: 1,
-    filter: "blur(0px)"
+    filter: "blur(0px)",
   },
   out: {
     opacity: 0,
     y: -8,
     scale: 0.99,
-    filter: "blur(4px)"
-  }
+    filter: "blur(4px)",
+  },
 };
 
 const pageTransition = {
   type: "tween",
   ease: [0.25, 0.46, 0.45, 0.94], // Custom cubic-bezier for smooth feel
-  duration: 0.35
+  duration: 0.3,
 };
 
 // Enhanced container with more sophisticated stagger
 const containerVariants = {
   initial: {
-    opacity: 0
+    opacity: 0,
   },
   in: {
     opacity: 1,
     transition: {
-      duration: 0.2,
+      duration: 0.1,
       when: "beforeChildren",
-      staggerChildren: 0.05,
-      delayChildren: 0.05
-    }
+      staggerChildren: 0.02,
+      delayChildren: 0.02,
+    },
   },
   out: {
     opacity: 0,
     transition: {
-      duration: 0.15,
+      duration: 0.08,
       when: "afterChildren",
-      staggerChildren: 0.03,
-      staggerDirection: -1
-    }
-  }
+      staggerChildren: 0.015,
+      staggerDirection: -1,
+    },
+  },
 };
 
 // More sophisticated item animations with natural motion
@@ -64,7 +64,7 @@ const itemVariants = {
     opacity: 0,
     y: 24,
     filter: "blur(6px)",
-    scale: 0.96
+    scale: 0.96,
   },
   in: {
     opacity: 1,
@@ -73,10 +73,10 @@ const itemVariants = {
     scale: 1,
     transition: {
       type: "spring",
-      damping: 30,
-      stiffness: 150,
-      mass: 0.6
-    }
+      damping: 35,
+      stiffness: 180,
+      mass: 0.4,
+    },
   },
   out: {
     opacity: 0,
@@ -84,10 +84,10 @@ const itemVariants = {
     filter: "blur(4px)",
     scale: 0.98,
     transition: {
-      duration: 0.15,
-      ease: "easeIn"
-    }
-  }
+      duration: 0.08,
+      ease: "easeIn",
+    },
+  },
 };
 
 // Hover animations for enhanced interactivity
@@ -95,36 +95,36 @@ const hoverVariants = {
   rest: {
     scale: 1,
     transition: {
-      duration: 0.15,
-      ease: "easeOut"
-    }
+      duration: 0.08,
+      ease: "easeOut",
+    },
   },
   hover: {
     scale: 1.02,
     transition: {
-      duration: 0.15,
-      ease: "easeOut"
-    }
-  }
+      duration: 0.08,
+      ease: "easeOut",
+    },
+  },
 };
 
 // Fade in animation for subtle elements
 const fadeVariants = {
   initial: { opacity: 0 },
-  in: { 
+  in: {
     opacity: 1,
     transition: {
-      duration: 0.4,
-      ease: "easeOut"
-    }
+      duration: 0.2,
+      ease: "easeOut",
+    },
   },
-  out: { 
+  out: {
     opacity: 0,
     transition: {
-      duration: 0.2,
-      ease: "easeIn"
-    }
-  }
+      duration: 0.1,
+      ease: "easeIn",
+    },
+  },
 };
 
 export function PageTransition({ children }: PageTransitionProps) {
@@ -158,10 +158,7 @@ export function AnimatedContainer({ children }: PageTransitionProps) {
 
 export function AnimatedItem({ children }: PageTransitionProps) {
   return (
-    <motion.div
-      variants={itemVariants}
-      className="w-full"
-    >
+    <motion.div variants={itemVariants} className="w-full">
       {children}
     </motion.div>
   );

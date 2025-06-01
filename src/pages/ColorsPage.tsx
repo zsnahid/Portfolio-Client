@@ -264,8 +264,8 @@ export default function ColorsPage() {
 
   return (
     <PageTransition>
-      <div className="space-y-8">
-        <AnimatedContainer>
+      <AnimatedContainer>
+        <div className="space-y-12">
           <AnimatedItem>
             <div className="text-center space-y-6">
               <h1 className="font-title text-4xl font-bold text-snow drop-shadow-lg">
@@ -290,9 +290,7 @@ export default function ColorsPage() {
               </div>
             </div>
           </AnimatedItem>
-        </AnimatedContainer>
 
-        <AnimatedContainer>
           {/* Color Inspiration */}
           <AnimatedItem>
             <Card className="p-6 bg-pine-dark border-forest-mid">
@@ -325,9 +323,7 @@ export default function ColorsPage() {
               </div>
             </Card>
           </AnimatedItem>
-        </AnimatedContainer>
 
-        <AnimatedContainer>
           {/* Primary Colors - Forest Foundation */}
           <AnimatedItem>
             <div className="space-y-6">
@@ -383,7 +379,9 @@ export default function ColorsPage() {
                 ))}
               </div>
             </div>
+          </AnimatedItem>
 
+          <AnimatedItem>
             {/* Functional Colors */}
             <div className="space-y-6">
               <div>
@@ -445,7 +443,7 @@ export default function ColorsPage() {
                         Spring → Mist gradient
                       </span>
                     </div>
-                    <div className="p-3 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg glow-spring">
+                    <div className="p-3 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg nav-glow">
                       <span className="font-medium">
                         Active navigation item
                       </span>
@@ -509,7 +507,9 @@ export default function ColorsPage() {
                 </Card>
               </div>
             </div>
+          </AnimatedItem>
 
+          <AnimatedItem>
             {/* Live Preview Section */}
             <div className="space-y-6">
               <div>
@@ -527,7 +527,7 @@ export default function ColorsPage() {
                     Sidebar Navigation
                   </h3>
                   <div className="bg-pine-dark border border-forest-mid rounded-lg p-4 space-y-2">
-                    <div className="flex items-center space-x-3 p-2 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg glow-spring">
+                    <div className="flex items-center space-x-3 p-2 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg nav-glow">
                       <div className="w-4 h-4 bg-forest-deep rounded"></div>
                       <span className="text-sm font-medium">Active Page</span>
                     </div>
@@ -571,7 +571,9 @@ export default function ColorsPage() {
                 </Card>
               </div>
             </div>
+          </AnimatedItem>
 
+          <AnimatedItem>
             {/* Usage Examples */}
             <div className="space-y-6">
               <div>
@@ -622,7 +624,9 @@ export default function ColorsPage() {
                 </Card>
               </div>
             </div>
-
+          </AnimatedItem>
+          
+          <AnimatedItem>
             {/* Accessibility Information */}
             <div className="space-y-6">
               <div>
@@ -690,8 +694,8 @@ export default function ColorsPage() {
               </div>
             </div>
           </AnimatedItem>
-        </AnimatedContainer>
-      </div>
+        </div>
+      </AnimatedContainer>
     </PageTransition>
   );
 }
