@@ -1,3 +1,4 @@
+import X from "@/assets/icons/x.svg?react";
 import {
   Dialog,
   DialogContent,
@@ -6,7 +7,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { ExternalLink, Github, Linkedin, Mail, X } from "lucide-react";
+import { ExternalLink, Github, Linkedin, Mail } from "lucide-react";
 
 interface ContactModalProps {
   children: React.ReactNode;
@@ -56,7 +57,9 @@ export function ContactModal({ children }: ContactModalProps) {
           <div className="mx-auto w-12 h-12 bg-gradient-to-br from-spring to-mist rounded-full flex items-center justify-center">
             <Mail className="w-6 h-6 text-forest-deep" />
           </div>
-          <DialogTitle className="text-xl text-center">Get In Touch</DialogTitle>
+          <DialogTitle className="text-xl text-center">
+            Get In Touch
+          </DialogTitle>
           <DialogDescription className="text-base text-center leading-relaxed">
             Let's collaborate and make great projects together
           </DialogDescription>

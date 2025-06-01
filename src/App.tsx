@@ -5,12 +5,10 @@ import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 
 // Lazy load all page components for better performance
 const HomePage = lazy(() => import("@/pages/HomePage"));
-const AboutPage = lazy(() => import("@/pages/AboutPage"));
-const ExperiencePage = lazy(() => import("@/pages/ExperiencePage"));
+// const ExperiencePage = lazy(() => import("@/pages/ExperiencePage"));
 const ProjectsPage = lazy(() => import("@/pages/ProjectsPage"));
 const ColorsPage = lazy(() => import("@/pages/ColorsPage"));
 const BlogPage = lazy(() => import("@/pages/BlogPage"));
-// const ContactPage = lazy(() => import('@/pages/ContactPage'));
 
 function App() {
   return (
@@ -22,22 +20,6 @@ function App() {
             element={
               <Suspense fallback={<LoadingSpinner />}>
                 <HomePage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="about"
-            element={
-              <Suspense fallback={<LoadingSpinner />}>
-                <AboutPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="experience"
-            element={
-              <Suspense fallback={<LoadingSpinner />}>
-                <ExperiencePage />
               </Suspense>
             }
           />

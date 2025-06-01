@@ -9,7 +9,6 @@ import {
   Linkedin,
   Menu,
   Palette,
-  User,
   X,
 } from "lucide-react";
 import { useState } from "react";
@@ -18,12 +17,10 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const navigationItems = [
   { path: "/", label: "Home", icon: Home },
-  { path: "/about", label: "About", icon: User },
   // { path: '/experience', label: 'Experience', icon: Briefcase },
   { path: "/projects", label: "Projects", icon: Code },
   { path: "/colors", label: "Colors", icon: Palette },
   { path: "/blog", label: "Blog", icon: FileText },
-  // { path: "/contact", label: "Contact", icon: Mail },
 ];
 
 const socialLinks = [
