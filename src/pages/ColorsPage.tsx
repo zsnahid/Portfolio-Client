@@ -445,7 +445,7 @@ export default function ColorsPage() {
                         Spring → Mist gradient
                       </span>
                     </div>
-                    <div className="p-3 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg nav-glow">
+                    <div className="p-3 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg glow-spring">
                       <span className="font-medium">
                         Active navigation item
                       </span>
@@ -527,7 +527,7 @@ export default function ColorsPage() {
                     Sidebar Navigation
                   </h3>
                   <div className="bg-pine-dark border border-forest-mid rounded-lg p-4 space-y-2">
-                    <div className="flex items-center space-x-3 p-2 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg nav-glow">
+                    <div className="flex items-center space-x-3 p-2 bg-gradient-to-r from-spring to-mist text-forest-deep rounded-lg glow-spring">
                       <div className="w-4 h-4 bg-forest-deep rounded"></div>
                       <span className="text-sm font-medium">Active Page</span>
                     </div>

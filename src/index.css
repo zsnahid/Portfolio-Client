@@ -112,12 +112,13 @@
 
 @layer base {
   * {
-    @apply box-border border-border outline-ring/50;
+    @apply box-border border-border;
   }
   body {
     @apply bg-background text-foreground font-body overflow-x-hidden;
   }
 }
+
 
 body {
   line-height: 1.6;
@@ -184,15 +185,15 @@ body {
 }
 
 /* Glow effects for active navigation items */
-.nav-glow {
+.glow-spring {
   box-shadow: 
     0 0 8px rgba(131, 192, 146, 0.15),
     0 0 12px rgba(131, 192, 146, 0.1),
     0 0 16px rgba(131, 192, 146, 0.05);
-  animation: nav-glow-pulse 3s ease-in-out infinite alternate;
+  animation: glow-spring-pulse 1s ease-in-out infinite alternate;
 }
 
-@keyframes nav-glow-pulse {
+@keyframes glow-spring-pulse {
   0% { 
     box-shadow: 
       0 0 6px rgba(131, 192, 146, 0.12),
@@ -207,25 +208,25 @@ body {
   }
 }
 
-.glow-spring {
+.glow-bloom {
   box-shadow: 
-    0 0 10px rgba(131, 192, 146, 0.3),
-    0 0 20px rgba(131, 192, 146, 0.2),
-    0 0 30px rgba(131, 192, 146, 0.1);
-  animation: glow-pulse 2s ease-in-out infinite alternate;
+    0 0 8px rgba(230, 126, 128, 0.3),
+    0 0 12px rgba(230, 126, 128, 0.2),
+    0 0 16px rgba(230, 126, 128, 0.1);
+  animation: glow-bloom-pulse 1s ease-in-out infinite alternate;
 }
 
-@keyframes glow-pulse {
+@keyframes glow-bloom-pulse {
   0% { 
     box-shadow: 
-      0 0 8px rgba(131, 192, 146, 0.25),
-      0 0 16px rgba(131, 192, 146, 0.15),
-      0 0 24px rgba(131, 192, 146, 0.08);
+      0 0 6px rgba(230, 126, 128, 0.25),
+      0 0 10px rgba(230, 126, 128, 0.15),
+      0 0 14px rgba(230, 126, 128, 0.08);
   }
   100% { 
     box-shadow: 
-      0 0 12px rgba(131, 192, 146, 0.35),
-      0 0 24px rgba(131, 192, 146, 0.25),
-      0 0 36px rgba(131, 192, 146, 0.15);
+      0 0 10px rgba(230, 126, 128, 0.35),
+      0 0 14px rgba(230, 126, 128, 0.25),
+      0 0 18px rgba(230, 126, 128, 0.15);
   }
 }

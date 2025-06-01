@@ -1,25 +1,39 @@
-import { cn } from '@/lib/utils';
+import { cn } from "@/lib/utils";
 import {
-    // Briefcase, 
-    Code, ExternalLink, FileText, Github, Home, Linkedin, Mail, Menu, Palette, User, X
-} from 'lucide-react';
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { ThemeToggle } from './ThemeToggle';
+  // Briefcase,
+  Code,
+  ExternalLink,
+  FileText,
+  Github,
+  Home,
+  Linkedin,
+  Mail,
+  Menu,
+  Palette,
+  User,
+  X,
+} from "lucide-react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navigationItems = [
-  { path: '/', label: 'Home', icon: Home },
-  { path: '/about', label: 'About', icon: User },
+  { path: "/", label: "Home", icon: Home },
+  { path: "/about", label: "About", icon: User },
   // { path: '/experience', label: 'Experience', icon: Briefcase },
-  { path: '/projects', label: 'Projects', icon: Code },
-  { path: '/colors', label: 'Colors', icon: Palette },
-  { path: '/blog', label: 'Blog', icon: FileText },
-  { path: '/contact', label: 'Contact', icon: Mail },
+  { path: "/projects", label: "Projects", icon: Code },
+  { path: "/colors", label: "Colors", icon: Palette },
+  { path: "/blog", label: "Blog", icon: FileText },
+  { path: "/contact", label: "Contact", icon: Mail },
 ];
 
 const socialLinks = [
-  { href: 'https://github.com/zsnahid', label: 'GitHub', icon: Github },
-  { href: 'https://www.linkedin.com/in/zahidsadmansakib/', label: 'LinkedIn', icon: Linkedin },
+  { href: "https://github.com/zsnahid", label: "GitHub", icon: Github },
+  {
+    href: "https://www.linkedin.com/in/zahidsadmansakib/",
+    label: "LinkedIn",
+    icon: Linkedin,
+  },
 ];
 
 export function MobileMenu() {
@@ -46,17 +60,19 @@ export function MobileMenu() {
 
       {/* Overlay */}
       {isOpen && (
-        <div 
+        <div
           className="lg:hidden fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-300"
           onClick={closeMenu}
         />
       )}
 
       {/* Mobile Menu */}
-      <div className={cn(
-        "lg:hidden fixed left-0 top-0 h-full w-72 bg-pine-dark border-r border-forest-mid/80 z-50 transform transition-transform duration-300 ease-in-out shadow-2xl",
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      )}>
+      <div
+        className={cn(
+          "lg:hidden fixed left-0 top-0 h-full w-72 bg-pine-dark border-r border-forest-mid/80 z-50 transform transition-transform duration-300 ease-in-out shadow-2xl",
+          isOpen ? "translate-x-0" : "-translate-x-full"
+        )}
+      >
         <div className="flex h-full flex-col pt-20">
           {/* Header */}
           <div className="px-5.5 py-5 border-b border-forest-mid/80">
@@ -66,8 +82,12 @@ export function MobileMenu() {
                   ZS
                 </div>
                 <div className="min-w-0">
-                  <h2 className="text-base font-semibold text-snow leading-tight tracking-wide">Zahid S. Sakib</h2>
-                  <p className="text-sm text-mist/80 leading-relaxed mt-0.5">Full Stack Developer</p>
+                  <h2 className="text-base font-semibold text-snow leading-tight tracking-wide">
+                    Zahid S. Sakib
+                  </h2>
+                  <p className="text-sm text-mist/80 leading-relaxed mt-0.5">
+                    Full Stack Developer
+                  </p>
                 </div>
               </div>
               <div className="ml-2">
@@ -82,7 +102,7 @@ export function MobileMenu() {
               {navigationItems.map((item) => {
                 const Icon = item.icon;
                 const isActive = location.pathname === item.path;
-                
+
                 return (
                   <Link
                     key={item.path}
@@ -90,16 +110,18 @@ export function MobileMenu() {
                     onClick={closeMenu}
                     className={cn(
                       "group flex items-center gap-4 rounded-xl px-4.5 py-3.5 transition-all duration-200 relative sidebar-nav-item",
-                      isActive 
-                        ? "bg-gradient-to-r from-spring to-mist text-forest-deep font-medium nav-glow" 
+                      isActive
+                        ? "bg-gradient-to-r from-spring to-mist text-forest-deep font-medium glow-spring"
                         : "text-mist hover:bg-forest-mid/60 hover:text-snow hover:shadow-sm"
                     )}
                   >
-                    <Icon className={cn(
-                      "transition-all duration-200 flex-shrink-0",
-                      "h-5 w-5",
-                      isActive ? "text-forest-deep" : "group-hover:scale-110"
-                    )} />
+                    <Icon
+                      className={cn(
+                        "transition-all duration-200 flex-shrink-0",
+                        "h-5 w-5",
+                        isActive ? "text-forest-deep" : "group-hover:scale-110"
+                      )}
+                    />
                     <span className="text-sm font-medium tracking-wide leading-none whitespace-nowrap">
                       {item.label}
                     </span>
@@ -130,7 +152,7 @@ export function MobileMenu() {
                 );
               })}
             </div>
-            
+
             {/* Copyright */}
             <div className="text-center border-t border-forest-mid/40 pt-3.5 mt-4">
               <p className="text-xs text-moss/70 leading-relaxed tracking-wide">
