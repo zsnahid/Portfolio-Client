@@ -11,10 +11,11 @@ export function Breadcrumb() {
     projects: 'Projects',
     blog: 'Blog',
     contact: 'Contact',
+    colors: 'Colors'
   };
 
   return (
-    <nav className="flex items-center gap-2.5 text-sm text-mist mb-5 pl-12 lg:pl-0">
+    <nav className="flex items-center gap-2.5 text-sm text-mist mb-5 pl-12 lg:pl-0 py-1.5">
       <Link 
         to="/" 
         className="flex items-center hover:text-spring transition-colors p-1 rounded-md hover:bg-forest-mid/30"

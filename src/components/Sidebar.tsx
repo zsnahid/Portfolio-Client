@@ -76,7 +76,7 @@ export function Sidebar({ className }: SidebarProps) {
                 "min-w-0 transition-all duration-500 overflow-hidden",
                 isCollapsed ? "opacity-0 w-0" : "opacity-100 w-auto"
               )}>
-                <h2 className="font-title text-sm font-semibold text-snow leading-tight tracking-wide whitespace-nowrap">Zahid Sadman</h2>
+                <h2 className="font-title text-sm font-semibold text-snow leading-tight tracking-wide whitespace-nowrap">Zahid S. Sakib</h2>
                 <p className="text-xs text-mist/80 leading-relaxed mt-0.5 whitespace-nowrap">Full Stack Developer</p>
               </div>
             </div>
@@ -160,7 +160,7 @@ export function Sidebar({ className }: SidebarProps) {
             isCollapsed ? "pt-0 mt-0 max-h-0 opacity-0" : "pt-3.5 mt-4 max-h-20 opacity-100"
           )}>
             <p className="text-xs text-moss/70 leading-relaxed tracking-wide whitespace-nowrap">
-              © 2025 Zahid Sadman
+              © 2025 Zahid S. Sakib
             </p>
           </div>
         </div>

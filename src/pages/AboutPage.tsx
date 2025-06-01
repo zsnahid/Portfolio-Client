@@ -23,7 +23,7 @@ export default function AboutPage() {
                   <Avatar className="w-32 h-32 mx-auto mb-4">
                     <AvatarFallback className="text-2xl bg-spring text-forest-deep">ZS</AvatarFallback>
                   </Avatar>
-                  <h2 className="text-xl font-semibold text-snow font-title">Zahid Sadman Sakib</h2>
+                  <h2 className="text-xl font-semibold text-snow font-title">Zahid S. Sakib</h2>
                   <p className="text-mist">Full Stack Developer</p>
                 </Card>
               </div>

@@ -1,7 +1,8 @@
 import { cn } from '@/lib/utils';
-import { 
-  // Briefcase, 
-  Code, ExternalLink, FileText, Github, Home, Linkedin, Mail, Menu, Palette, User, X } from 'lucide-react';
+import {
+    // Briefcase, 
+    Code, ExternalLink, FileText, Github, Home, Linkedin, Mail, Menu, Palette, User, X
+} from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ThemeToggle } from './ThemeToggle';
@@ -65,7 +66,7 @@ export function MobileMenu() {
                   ZS
                 </div>
                 <div className="min-w-0">
-                  <h2 className="text-base font-semibold text-snow leading-tight tracking-wide">Zahid Sadman</h2>
+                  <h2 className="text-base font-semibold text-snow leading-tight tracking-wide">Zahid S. Sakib</h2>
                   <p className="text-sm text-mist/80 leading-relaxed mt-0.5">Full Stack Developer</p>
                 </div>
               </div>
@@ -133,7 +134,7 @@ export function MobileMenu() {
             {/* Copyright */}
             <div className="text-center border-t border-forest-mid/40 pt-3.5 mt-4">
               <p className="text-xs text-moss/70 leading-relaxed tracking-wide">
-                © 2025 Zahid Sadman
+                © 2025 Zahid S. Sakib
               </p>
             </div>
           </div>

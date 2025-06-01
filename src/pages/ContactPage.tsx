@@ -30,14 +30,14 @@ export default function ContactPage() {
     {
       icon: Mail,
       label: 'Email',
-      value: 'zahid@example.com',
-      href: 'mailto:zahid@example.com'
+      value: 'zahidsadmannahid@gmail.com',
+      href: 'mailto:zahidsadmannahid@gmail.com'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+880 XXX XXX XXXX',
-      href: 'tel:+880XXXXXXXXX'
+      value: '+880 1833 77589',
+      href: 'tel:+8801833775869'
     },
     {
       icon: MapPin,
@@ -52,13 +52,13 @@ export default function ContactPage() {
       icon: Github,
       label: 'GitHub',
       href: 'https://github.com',
-      username: '@zahidsadman'
+      username: '@zsnahid'
     },
     {
       icon: Linkedin,
       label: 'LinkedIn',
       href: 'https://linkedin.com',
-      username: 'zahid-sadman-sakib'
+      username: 'zahidsadmansakib'
     }
   ];
 

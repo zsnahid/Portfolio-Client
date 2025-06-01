@@ -15,7 +15,7 @@ export default function HomePage() {
               <div className="relative">
                 <img
                   src="/src/assets/profile.jpeg"
-                  alt="Zahid Sadman"
+                  alt="Zahid S. Sakib"
                   className="w-24 h-24 sm:w-32 sm:h-32 rounded-full border-3 sm:border-4 border-spring/20 shadow-lg object-cover"
                 />
                 <div className="absolute -bottom-0.5 -right-0.5 sm:-bottom-1 sm:-right-1 w-6 h-6 sm:w-8 sm:h-8 bg-spring rounded-full border-3 sm:border-4 border-pine-dark flex items-center justify-center">
@@ -51,7 +51,7 @@ export default function HomePage() {
                 <div className="text-xs text-mist/80">Projects</div>
               </div>
               <div className="text-center">
-                <div className="text-base sm:text-lg font-semibold text-snow">2+</div>
+                <div className="text-base sm:text-lg font-semibold text-snow">1+</div>
                 <div className="text-xs text-mist/80">Years Exp</div>
               </div>
               <div className="text-center">
